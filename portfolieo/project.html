@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Tayyaba Zanib</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8b5cf6',
+            secondary: '#3b82f6',
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #0f172a, #000);
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .project-card {
+      background: rgba(15, 15, 16, 0.6);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(2, 4, 6, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      backdrop-filter: blur(4px);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(2, 4, 6, 0.7);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .project-card-content {
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card:hover .project-card-content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    footer span {
+    color: #60a5fa;
+  }
+
+    @media (max-width: 900px) {
+      .projects-layout {
+        grid-template-columns: 1fr !important;
+      }
+    }
+     /* === Navbar === */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  header h1 {
+    color: #60a5fa;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  nav a {
+    margin-left: 25px;
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+ <header>
+    <h1 class="text-violet-400 font-semibold text-lg">Tayyaba Zanib</h1>
+    <nav>
+      <a href="index.html#home">Home</a>
+      <a href="#">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header
+ 
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <div class="max-w-6xl mx-auto px-6 lg:px-24 py-16">
+      <div class="mb-12 text-center">
+        <h1 class="text-4xl font-bold mb-3">Projects</h1>
+        <p class="text-gray-400">Here you will find a selection of projects I have worked on.</p>
+      </div>
+
+      <!-- Projects Layout -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <a href="project1.html">
+            <img src="assets\project1.jpg" >
+            <div class="project-card-content">
+              <h3 class="text-lg font-semibold mb-2">Discover Your New Style</h3>
+              <p class="text-gray-300 text-sm">Shop the season's hottest styles with just a tap. Find clothes, beauty, and perfumes tailored to your taste.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <a href="project2.html">
+            <img src="assets\project2.png" >
+            <div class="project-card-content">
+              <h3 class="text-lg font-semibold mb-2">Order. Track. Enjoy. Your Food, Your Way.
+
+</h3>
+              <p class="text-gray-300 text-sm">Order your favorite meals in seconds. Login with Firebase, manage your orders, and delete what you don’t want — all in one sleek app. 
+
+</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <a href="project3.html">
+            <img src="assets/project3.png" >
+            <div class="project-card-content">
+              <h3 class="text-lg font-semibold mb-2">Book. Manage. Glow. In 3 Taps.</h3>
+              <p class="text-gray-300 text-sm">Book salon services in seconds. Login with Firebase, manage bookings, and cancel anytime. Built with Flutter — looks real, works like one.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card">
+          <a href="project4.html">
+            <img src="assets\project4.jpg" >
+            <div class="project-card-content">
+              <h3 class="text-lg font-semibold mb-2">AntiSleep Glasses</h3>
+              <p class="text-gray-300 text-sm">Monitor. Alert. Prevent. Real-Time Drowsiness Detection for Drivers.
+</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card">
+          <a href="project5.html">
+            <img src="assets/project5.jpg" >
+            <div class="project-card-content">
+              <h3 class="text-lg font-semibold mb-2">Canvas Wander</h3>
+              <p class="text-gray-300 text-sm">Swipe through full-screen, story-driven landscapes with ratings and “Read More” — built for immersive gallery browsing.</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- CTA -->
+        <section class="flex flex-col justify-center items-center text-center bg-gray-900/50 border border-gray-800 rounded-2xl p-8">
+          <div class="text-5xl mb-4">😄</div>
+          <h2 class="text-2xl font-semibold mb-2">Let's Work Together!</h2>
+          <p class="text-gray-400 mb-4 max-w-md">Have a project in mind? Let's talk about it.</p>
+          <a href="port.html#contact" class="px-6 py-2 rounded-lg bg-gradient-to-r from-violet-500 to-blue-500 hover:opacity-80 transition">Contact Me</a>
+        </section>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer (same as portfolio) -->
+  <footer class="px-6 lg:px-24 py-6 border-t border-gray-800 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center bg-black">
+    <p>© 2025 <span>Tayyaba</span> All rights reserved.</p>
+    <p>Website designed in Figma. Built with HTML, Tailwind CSS & JS.</p>
+  </footer>
+
+</body>
+</html>

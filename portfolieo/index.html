@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tayyaba - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8b5cf6',
+            secondary: '#3b82f6',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body {
+      background: radial-gradient(circle at top left, #0f172a, #000);
+      color: #e5e7eb;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #a855f7, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+     .masonry {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 2 projects per row */
+      gap: 18px;
+    }
+    footer span {
+    color: #60a5fa;
+  }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-8 py-5 border-b border-gray-800 sticky top-0 bg-black/70 backdrop-blur-md z-50">
+    <div class="flex items-center space-x-2">
+      <span class="text-violet-400 font-semibold text-lg">⚡Tayyaba Zanib</span>
+    </div>
+    <ul class="flex space-x-8 text-sm text-gray-300">
+      <li><a href="#home" class="hover:text-white">Home</a></li>
+      <li><a href="project.html" class="hover:text-white">  Projects</a></li>
+      <li><a href="#contact" class="hover:text-white">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col items-center text-center py-16 px-4">
+    <img src="C:\Users\zanib\Downloads\68edaf7d192c18f768a6a7712581aba7_high.webp" alt="Avatar" class="w-24 h-24 rounded-full mb-6" />
+    <h1 class="text-4xl font-bold mb-2">Hey, I'm <span class="gradient-text">Tayyaba Zanib ✨</span></h1>
+    <h2 class="text-2xl font-semibold text-gray-300 mb-4"> <span class="gradient-text">App Developer</span></h2>
+    <p class="max-w-2xl text-gray-400 mb-6">
+      A <strong>fullstack developer</strong> with solid foundations in <strong>design</strong>.
+      Passionate about crafting seamless user experiences — I thrive at the intersection of creativity and functionality.
+    </p>
+    <div class="flex space-x-4">
+      <button type="button" onclick="scrollToContact()" class="px-5 py-2 rounded-lg bg-gradient-to-r from-violet-500 to-blue-500 hover:opacity-80 transition">Contact Me</button>
+      <a href="project.html" class="px-5 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition">View Projects</a>
+    </div>
+  
+  </section>
+
+  <!-- About / Building Experiences -->
+  <section class="px-6 lg:px-24 py-12">
+    <h2 class="text-3xl font-bold mb-2">Building Digital Experiences</h2>
+    <p class="text-gray-400 mb-10">I specialize in creating stunning user interfaces and developing high-quality applications that stand out.</p>
+
+    <div class="masonry">
+      <!-- What I Can Do -->
+      <div class="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-violet-600 transition">
+        <h3 class="text-xl font-semibold mb-3">🧩 What I can do</h3>
+        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+          <li>Mobile App Development (Flutter, Android & iOS)</li>
+          <li>Firebase Integration & Backend Services</li>
+          <li>Firebase Integration & Backend Services</li>
+          <li>UI/UX Design for Mobile Apps</li>
+          <li>API Integration for Mobile Apps</li>
+
+        </ul>
+      </div>
+
+      <!-- Tools I Use -->
+      <div class="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-violet-600 transition">
+        <h3 class="text-xl font-semibold mb-3">🛠️ Tools I Use</h3>
+       <ul class="list-disc pl-5 text-gray-400 space-y-2">
+          <li>App Dev: Flutter, Dart, Android Studio</li>
+          <li>Backend & Database: Firebase (Firestore, Auth, Cloud Functions)</li>
+          <li>Design: Figma</li>
+        </ul>
+      </div>
+
+      <!-- UI/UX Design -->
+      <div class="p-6 bg-gray-900/50 border border-gray-800 rounded-2xl hover:border-violet-600 transition">
+        <h3 class="text-xl font-semibold mb-3">🎨 UI/UX Design</h3>
+        <ul class="list-disc pl-5 text-gray-400 space-y-2">
+          <li>Mobile-First User-Centered Design</li>
+          <li>Modern & Clean UI</li>
+          <li>Responsive & Adaptive Layouts for Different Devices</li>
+          <li>Wireframes & Prototypes</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="project.html" class="px-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition">View My Projects</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="px-6 lg:px-24 py-16 bg-gradient-to-r from-violet-700/20 to-blue-700/10 rounded-t-3xl">
+    <h2 class="text-2xl font-bold text-center mb-2 gradient-text">Bringing your ideas to life.</h2>
+    <p class="text-center text-gray-400 mb-8">Have a project in mind or just want to chat? Let’s connect!</p>
+
+    <form action="https://formspree.io/f/xgvrvljp" method="POST" class="max-w-2xl mx-auto space-y-4">
+  <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg" />
+  <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg" />
+  <textarea name="message" rows="5" placeholder="Your message here..." required class="w-full p-3 bg-gray-900 border border-gray-700 rounded-lg"></textarea>
+  <button type="submit" class="w-full bg-gradient-to-r from-violet-500 to-blue-500 py-3 rounded-lg hover:opacity-90 transition">Send</button>
+</form>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="px-6 lg:px-24 py-6 border-t border-gray-800 text-sm text-gray-400 flex flex-col sm:flex-row justify-between items-center">
+    <p>© 2025 <span>Tayyaba.</span> All rights reserved.</p>
+    <p>Website designed in Figma. Built with HTML,Tailwind CSS & js.</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+   
+    function scrollToContact() {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
